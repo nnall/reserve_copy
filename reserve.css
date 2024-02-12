@@ -1,0 +1,827 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+}
+
+/* COLORS */
+:root {
+    /*COLORS*/
+    --green: #008938;
+    --green2: #abdcbf;
+    --greenBright: rgb(67, 201, 123);
+    --greenLite: rgba(0, 137, 56, 0.567);
+    --greenLite2: rgba(0, 137, 56, 0.25);
+    --yellow: #f0b400;
+    --yellowLite: rgba(240, 180, 0, .4);
+    --yellowLite2: rgba(255, 223, 126, 0.48);
+    --bgWhite: #f8f9fa;
+    --buttonRed: rgba(255, 0, 0, 0.352);
+    /*from bootstrap*/
+    --borderLiteColor: rgba(0, 0, 0, 0.567);
+    
+
+    /* BOOTSTRAP */
+    /* --bs-btn-font-size:.5rem */
+
+    /* TRANSITION */
+    --transition1: all .05s ease-in;
+    --transition2: all .7s ease-in-out;
+
+
+    /* SHADOW */
+    --shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    --shadow2: 4px 4px 7px rgba(0, 0, 0, 0.2);
+    --shadow3: 0 5px 25px 0 rgba(0, 0, 0, .3);
+    --niceShadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    --niceShadow2: 3px 3px 4px rgba(0, 0, 0, 0.4);
+    /* BORDER */
+    --borderLite: .5px solid rgba(0, 0, 0, 0.567);
+    --borderGreenLite: .5px solid rgba(0, 137, 56, 0.567);
+    --borderGreen: .5px solid rgb(0, 137, 56);
+
+    /* OVERRIDING STYLES FOR FULLCALENDAR */
+    --fc-event-bg-color: #f0b400;;
+    --fc-border-color: black;
+    --fc-button-border-color: black;
+    --fc-button-bg-color:#f0b400;
+
+    /* hover color */
+    --fc-button-hover-bg-color:#008938;
+    --fc-button-hover-border-color:black;
+
+
+    /* FONT-SIZING */
+    --navLinkSize: 1.75rem;
+    --headerPara: min(7vw, 1.2em);
+
+    --mainPara: min(7vw, 1.15em);
+    --mainParaSmall: min(7vw, 1.1em);
+    --mainParaSmallMob: min(7vw, 1em);
+
+    /* OVERRIDING FONT STYLE FOR FULLCALENDAR */
+    --fc-small-font-size: .95em; /*link font-size*/
+    --priceSize: min(7vw, 1.3em);
+
+    /* FONT COLOR */
+    --opaqueColor: rgba(0, 0, 0, 0.562);
+
+    /* FONT-FAMILY */
+    --roboto: 'Roboto', sans-serif;
+    --yk: 'Yanone Kaffeesatz', sans-serif;
+
+    /*PADDING */
+    --padding: min(2rem, 5%);
+}
+
+
+/* .row_1_reserve {
+    margin-bottom:0 !important;
+    margin-top: 69px;
+    background-image: url("../../images/applyBg_img.webp");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position:top center;
+    padding-bottom:3rem;
+    display:flex;
+} */
+
+
+body{
+    position:relative;
+    min-height: 100vh;
+}
+
+.privPol_page, .tos_page{
+    background:var(--greenLite);
+}
+
+
+footer {
+margin-top:auto;
+/* border: 1px solid blue; */
+    z-index:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    color: rgba(255, 255, 255, 0.638);
+    padding: 10px;
+    font-family:avenir, sans-serif;
+    box-sizing: border-box;
+   
+}
+
+
+footer svg{
+    margin-right:.15rem;
+    margin-top: -4.5px;
+}
+
+footer p{
+    color: rgba(255, 255, 255, 0.638);
+   
+    vertical-align: middle;
+}
+
+footer a{
+    margin-left:10px;
+    color: rgba(255, 255, 255, 0.638) !important;
+}
+
+
+
+footer a:hover{
+    cursor: pointer;
+    color: var(--greenBright) !important;
+}
+
+
+
+
+
+.row_1_reserve {
+    margin-bottom: 0 !important;
+    /* margin-top: 69px; */
+    background-image: url("../images/applyBg_img.webp");
+    background-attachment:fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    /* padding-bottom: 6rem; */
+    display: flex;
+    min-height: 100vh;
+    /* Set minimum height to 100% of the viewport height */
+}
+
+.reserve_main_row_1{
+    display:flex;
+    flex-direction:column;
+    /* align-items:center; */
+    /* justify-content: center; */
+}
+
+.component{
+    /* border: 2px solid red; */
+    align-self:center;
+    width:100%;
+    max-width:1120px; 
+}
+
+.reserve_main_row_1>*:not(.component){
+    color:white;
+    text-shadow: var(--shadow);
+}
+
+h1,
+h2,
+h3 {
+    color: white !important;
+}
+
+.btn-primary-portal{
+    background-color: var(--yellow) !important;
+    border: 3px solid transparent !important;
+    transition: color .15s ease, transform .15s ease, box-shadow .15s ease, background-color .15s ease, border-color .15s ease !important;
+}
+
+button{
+    transition:all ease-in-out .2s;
+}
+
+
+
+
+.back-btn {
+    position:fixed;
+    z-index:2;
+    top: 1rem;
+    right:1rem;
+    transition:var(--transition1);
+    font-size: 3px !important;
+    opacity: .65;;
+}
+
+.back-btn:hover{
+    opacity:1;
+    background-color:var(--yellow)
+}
+
+svg{
+    transition:transform .1s ease-in-out;
+}
+
+h1.portal_title, h1.reserve_title 
+{
+    font-size: calc(4rem + 1.5vw) !important;
+    margin-top:calc(3rem + 3vw) !important;
+    width: min-content;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+
+}
+
+
+.portal_title span, .reserve_title span, h3 span{ 
+    color: var(--yellow);
+    text-shadow: var(--niceShadow2);
+}
+
+
+
+h3.portalSubtitle{
+    margin-top:0 !important;
+    margin-left: 5%
+}
+
+
+
+
+/* *********** PORTAL DIALOG    ************/
+
+dialog {
+    position: fixed;
+    border:none;
+    border-radius: 5px;
+    box-shadow: var(--niceShadow2);
+    height: 95%;
+    max-height: unset;
+    width: 95%; 
+    max-width: 1200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: visible !important;
+}
+
+@media (min-width: 500px) {
+    dialog{
+        height:90%;
+        width:90%;
+    }
+}
+
+
+
+
+
+.profile_modal_child, .reserve_modal_child{
+overflow:visible !important;
+flex-direction:row !important;
+gap:1% !important;
+/* border: 4px solid red; */
+}
+
+.leftbox{
+   position:sticky;
+    width: 15%;
+    max-width:150px;
+    min-width:60px;
+    overflow:scroll;
+    background-color: var(--greenBright);
+    box-shadow:3px 3px 10px rgba(119, 119, 119, .5);
+    transform:scaleY(1.1) translateX(0);
+    border: .5em solid white;
+    display:flex;
+    align-items:flex-start;
+}
+
+/* Add a media query for mobile widths */
+@media (max-width: 500px) {
+    .profile_modal_child {
+        gap: 0 !important
+    }
+  
+    .leftbox {
+        transform: translateX(-1rem) scaleY(1.05);
+        margin-left: 0;
+    }
+}
+
+nav {
+    width:100%;
+}
+
+.leftbox >nav >a{
+    color:white;
+    text-decoration: none;
+    height:7rem;
+    display:flex;;
+    justify-content:center;
+    align-items:center;
+   transition:all .2s ease-in;
+   width:100%;
+}
+
+
+.leftbox > nav >a:hover{
+    cursor: pointer;
+    background-color: #a3e2bd;
+    color:#10ac84
+}
+
+.leftbox >nav>a >svg{
+    min-height:30px;
+    min-width:30px;
+    /* border: 1px solid yellow; */
+}
+
+.leftbox>nav>a:hover svg{
+    transform:scale(1.1);
+}
+
+.leftbox > nav > a.active{
+    color: #10ac84;
+}
+
+.rightbox{
+    width:100%;;
+    margin-top:1rem;
+    overflow:scroll;
+    padding:0;
+}
+.rightbox::-webkit-scrollbar {
+    width: 0;
+}
+
+
+
+.tabShow h2, .tabShow h3{
+    color: black !important
+}
+
+.tab_h2_box{
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 70%, rgba(9, 9, 121, 0) 100%);
+    margin-bottom:1rem;
+}
+
+
+
+/* TAB SECTION TITLES */
+.tab_h2_box>h2{
+    background-color:white;
+    margin:0;
+    color:black !important;
+}
+
+/*********  PROFILE MODAL  *********/
+
+.profile-field{
+    overflow:visible;
+}
+
+.profile-field>* {
+    display: block;
+    font-family: var(--roboto);
+    font-size: min(3.5vw, 1.15em);
+}
+
+.profile-field, .profile-field >input{
+    color:#777;
+    transition: all .09s ease-in;
+}
+
+.profile-field>input:focus-visible {
+    outline: none;
+    border-bottom: 1px solid var(--green);
+    color: black;
+    font-weight:500 !important;
+   font-size:1.35rem;
+    /* border: 1px solid blue; */
+    padding-left:.25rem;
+}
+
+.profile-field>input:focus-visible::placeholder{
+    color: rgba(0, 0, 0, 0.346) !important;
+   
+}
+
+.profile-field >label{
+    text-transform: uppercase;
+    letter-spacing:2px;
+    margin-bottom:.5rem;
+    /* margin-right: 15px; */
+}
+
+.profile-field >input{
+    border:none;
+    border-bottom:1px solid var(--greenLite2);
+   
+    width:100%;
+    margin-bottom:calc(.5rem + .75vw)!important;
+    line-height:calc(1.5rem + 1vw) !important;
+    display: flex;
+}
+
+/*********  RESERVE MODAL  *********/
+
+.react-datetime-picker__wrapper,
+.react-datetime-picker__inputGroup {
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    font-size:1.25rem;
+}
+
+.react-datetime-picker__wrapper {
+    padding: 25px 0;
+    background-color: #fff;
+    flex-direction:column;
+}
+
+.react-datetime-picker__inputGroup__input { 
+    color: #666;
+    width:max-content;
+    margin:3px;
+    ;
+ 
+    /* Input text color */
+}
+
+.react-datetime-picker__button {
+    border: none;
+    background-color: transparent;
+    color: #333;
+    /* Icon color */
+}
+
+.dates{
+    border:1px solid blue;
+    display:flex;
+    flex-direction:column;
+    gap: 1rem;
+    /* padding: calc(2rem + 1.5vw) */
+}
+
+.dates span.dateBlock{
+    border: 2px solid green;
+    /* padding:1rem; */
+    display:flex; 
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+    gap:.75rem;
+}
+
+span.dateBlock:first-of-type{
+    margin-top:3%;;
+}
+
+.dateBlock label{
+    font-size:1.5rem;
+    font-family: var(--roboto);
+    font-weight:300;
+}
+
+.react-datetime-picker__inputGroup{
+    border: 1px solid red;
+    /* width:140%; */
+}
+.react-datetime-picker__inputGroup >*:first-child{
+    border:1px solid black;
+}
+
+/* ********* */
+
+.tabShow h4{
+    text-align:center;
+    font-size:1.5em !important;
+    font-weight:700 !important;
+}
+
+
+
+@media (min-width:650px) {
+
+    .dates span.dateBlock{
+        flex-direction:row;
+        gap:unset;
+    }
+    .profile-field>input {
+        width:60%;
+    }
+}
+.tabShow{
+    transition:all .5s ease-in;
+    min-height:100%;
+}
+
+
+/* UPDATE BUTTON  IN MODAL */
+.tabShow button.updateBtn{
+    position: fixed;
+    bottom:0;
+    bottom:1rem;
+    right:.5rem;
+    margin-right:.5rem;
+}
+
+dialog::-webkit-scrollbar{
+    display:none;
+}
+
+ @keyframes myFadeIn {
+     from {
+         opacity: 0;
+     }
+
+     to {
+         opacity: 1;
+     }
+ }
+
+  @keyframes myFadeOut {
+      from {
+          opacity: 1;
+      }
+
+      to {
+          opacity: 0;
+      }
+  }
+
+
+dialog[open] {
+    animation: myFadeIn  .55s ease ;
+}
+
+/* dialog background color*/
+dialog::backdrop{
+    background:rgba(0, 137, 57, 0.183);
+    backdrop-filter: blur(3px);
+}
+
+/* DIALOG OPEN/CLOSE ANIMATIONS */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+        transform:translateX(-50%)
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* MODAL CLOSE BTN */
+.modalClose_btn {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-radius:50%;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    z-index: 50;
+    opacity: .65;
+
+    >svg {
+        height: 2.5rem;
+        width: 2.5rem;
+        transition: all .15s ease-in-out;
+
+        >.circle {
+            fill: rgb(255, 122, 122);;
+            stroke: rgb(255, 0, 0);
+        }
+
+        >.cross {
+            stroke: red;
+        }
+    }
+
+    &:hover,
+    &:focus-visible {
+        opacity: 1;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+        >svg {
+            scale: 1.3;
+
+            >.circle {
+                fill: rgb(238, 72, 72);
+                stroke:white;
+            }
+
+            >.cross {
+                stroke: white;
+            }
+        }
+    }
+}
+
+.modal_child, .profile_modal_child, .reserve_modal_child{
+        display: flex;
+        flex-direction:column;
+        padding: 1rem 1rem;
+        gap: 1rem;
+        overflow: hidden;
+        height: 100%;
+}
+
+.profile_modal_child, .reserve_modal_child{
+    overflow-x: hidden;
+}
+
+/* LOGIN */
+
+.login_main, .portal_main{
+    margin:0;
+    overflow:scroll;
+    background-color:black;
+    height: 100vh !important;
+    width:100vw !important;
+}
+
+.portal_main{
+    background-image: url("reserve_imgs/hwy.webp");
+    background-attachment:fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center; 
+
+}
+
+.portal_main_row_1{
+display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+video{
+    position:fixed;
+    margin:0!important;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:.65;
+}
+
+.row_1_login{
+    z-index:1;
+}
+
+.login_main_row_1{
+    display:flex;
+    padding-top:20vh;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* GWG Logo */
+.login_main_row_1 img{
+  position:absolute;
+  top:1rem;
+  left:1rem;
+  width:3rem;
+  height:3rem;
+}
+
+.login_box{
+    display:block;
+    padding:.75rem .5rem;
+    border-radius: 10px;
+    box-shadow:var(--niceShadow1);
+    /* text-align:center; */   
+}
+
+.login_box h2 span{
+    color: var(--yellow);
+    text-shadow: var(--niceShadow2);
+}
+
+.login_box form{
+    padding:1rem;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:1.25rem;
+    margin-top:1rem;
+    /* border:1px solid blue; */
+}
+
+.label_box{
+    display:flex;
+    justify-content:space-between;
+}
+
+.login_box form label{
+    /* border: 1px solid green; */
+    font-weight:900;
+    font-size: var(--mainPara);
+    margin-right: .75rem;
+}
+
+.login_box form input{
+    padding: .25rem;
+    padding-left:.75rem;
+    font-weight: 700;
+    border-radius: 5px;
+    border:none;
+    align-self:flex-end;
+    width:100%;
+}
+
+.login_box form > * > button{
+    font-family:var(--yk)!important;
+    padding:.25rem !important;
+    margin-top:1rem;
+}
+
+.login_box form>*>button:focus,
+.login_box form>*>button:focus-visible{
+    border:none!important;
+}
+
+
+.portal_center{
+    max-width:100%;
+    padding: min(2rem, 5%);
+    margin-top:1rem;
+    display:grid;
+    gap:2rem;
+    overflow: scroll;
+}
+
+.portal_center > *{
+    background-color: rgba(255, 255, 255, 0.665);
+    /* border-radius: 10px; */
+    padding: 1rem;
+    display: inline-block;
+    box-shadow: var(--shadow2);
+}
+
+.portal_center > * >h2{
+    margin-bottom: 1rem;
+    font-weight: 300 !important;
+    text-decoration:underline;
+    text-decoration-thickness: .2 !important;
+    font-family: var(--yk);
+    font-size: 3em !important;
+    color: black !important;
+    letter-spacing:1px !important;
+   
+}
+
+/* LOG OUT & GWG LINK BUTTONS */
+.portal_btn_container {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* .date_box >div> div {
+    border: 1px solid red;
+    width:100%;
+
+} */
+
+.btn-primary-portal{
+    font-size:1.5em !important;
+    /* padding: 1.5rem !important; */
+}
+
+@media(min-width: 550px) {
+    .portal_btn_container {
+            flex-direction: row;
+        }
+}
+
+@media(min-width:670px){
+    .btn-primary-portal {
+            /* font-size: 2em !important; */
+            padding: .5rem !important;
+          
+        }
+
+        h1.portal_title{
+            width:max-content
+        }   
+}
+
